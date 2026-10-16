@@ -1,0 +1,22 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "elyane:fire_boots"
+      },
+      {
+        "texture": "elyane:fire_boots"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "elyane:fire_boots"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "elyane:fire_boots"
+      }
+    ]
+  }
+}

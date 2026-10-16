@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "b": "minecraft:black_concrete",
+    "c": "minecraft:compass",
+    "y": "minecraft:yellow_concrete"
+  },
+  "pattern": [
+    "byb",
+    "ycy",
+    "byb"
+  ],
+  "result": {
+    "id": "elyane:atc"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "elyane:block/atc_bottom",
+    "side": "elyane:block/atc_side",
+    "top": "elyane:block/atc_top"
+  }
+}

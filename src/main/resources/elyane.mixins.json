@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "package": "ssal333.elyane.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "ArmorStandControlMixin",
+    "BlockFireworkRocketMixin",
+    "ExampleMixin",
+    "ShearingJukeboxMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+	}
+}

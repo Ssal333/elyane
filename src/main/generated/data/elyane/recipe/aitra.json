@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "minecraft:elytra",
+    "minecraft:lapis_block",
+    "minecraft:lapis_block",
+    "minecraft:lapis_block",
+    "minecraft:lapis_block",
+    "minecraft:diamond",
+    "minecraft:diamond",
+    "minecraft:diamond",
+    "minecraft:diamond"
+  ],
+  "result": {
+    "id": "elyane:aitra"
+  }
+}

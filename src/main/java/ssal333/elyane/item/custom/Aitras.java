@@ -16,16 +16,14 @@ import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
 import ssal333.elyane.component.ModComponents;
 import ssal333.elyane.item.ModItems;
+import ssal333.elyane.misc.ModGameRules;
 
 import java.util.function.Consumer;
 
 
 public class Aitras extends Item {
 
-    private double calculateAbsoluteSpeed(Vec3 startingPos, Vec3 finalPos){
 
-        return startingPos.distanceTo(finalPos);
-    }
 
     public static int calculateDistanceFromGround(Entity entity, Level level){
 
@@ -81,15 +79,16 @@ public class Aitras extends Item {
 
             if (Boolean.FALSE.equals(itemStack.get(ModComponents.ACTIVE_WINGS)) && isEquipped && charge>0) {
                 float speed = player.getSpeed();
-                if (speed > 4 && player.getItemBySlot(EquipmentSlot.FEET).is(ModItems.FIRE_BOOTS)){
+                if(level instanceof ServerLevel serverLevel) {
+                    double takeOffSpeed = serverLevel.getGameRules().get(ModGameRules.TAKE_OFF_SPEED_DOUBLE_GAMERULE);
+                    if (speed > takeOffSpeed && player.getItemBySlot(EquipmentSlot.FEET).is(ModItems.FIRE_BOOTS)) {
 
-                    itemStack.set(ModComponents.ACTIVE_WINGS, true);
-                    player.setDeltaMovement(new Vec3(forward.x()*10, 2, forward.z()*10));
-                    player.hurtMarked = true;
+                        itemStack.set(ModComponents.ACTIVE_WINGS, true);
+                        player.setDeltaMovement(new Vec3(forward.x() * 10, 2, forward.z() * 10));
+                        player.hurtMarked = true;
 
 
-
-
+                    }
                 }
             }else if(!isEquipped){
                 itemStack.set(ModComponents.ACTIVE_WINGS, false);

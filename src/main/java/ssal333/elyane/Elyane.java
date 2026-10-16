@@ -4,7 +4,6 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.entity.event.v1.EntityElytraEvents;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
-import net.fabricmc.fabric.api.event.player.ItemEvents;
 import net.minecraft.resources.Identifier;
 
 import org.slf4j.Logger;
@@ -14,6 +13,7 @@ import ssal333.elyane.effect.ModEffects;
 import ssal333.elyane.event.*;
 import ssal333.elyane.item.ModCreativeModeTab;
 import ssal333.elyane.item.ModItems;
+import ssal333.elyane.misc.ModGameRules;
 
 
 public class Elyane implements ModInitializer {
@@ -33,13 +33,14 @@ public class Elyane implements ModInitializer {
 		ModItems.registerModItems();
 		ModCreativeModeTab.registerCreativeModTab();
 		ModBlocks.registerModBlocks();
+		ModGameRules.registerGameRules();
 		ServerLivingEntityEvents.ALLOW_DAMAGE.register(new DamageEvent());
 		EntityElytraEvents.CUSTOM.register(new ElytraOpen());
 		EntityElytraEvents.ALLOW.register(new ElytraOpen());
 
 
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Registering Elyane stuffs...");
 	}
 
 	public static Identifier id(String path) {

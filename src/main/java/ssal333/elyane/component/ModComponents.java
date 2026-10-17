@@ -1,6 +1,7 @@
 package ssal333.elyane.component;
 
 import com.mojang.serialization.Codec;
+import net.minecraft.client.resources.sounds.SoundInstance;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -27,6 +28,8 @@ public class ModComponents {
             Identifier.fromNamespaceAndPath(Elyane.MOD_ID, "flying_power"),
             DataComponentType.<Integer>builder().persistent(ExtraCodecs.NON_NEGATIVE_INT).networkSynchronized(ByteBufCodecs.VAR_INT).build()
     );
+
+
 
     public static final DataComponentType<AdvancedCustomComponent> ARRIVAL_POS = Registry.register(
             BuiltInRegistries.DATA_COMPONENT_TYPE,

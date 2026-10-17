@@ -18,9 +18,9 @@ public class ModCreativeModeTab {
     );
 
     public static final CreativeModeTab CREATIVE_MODE_TAB = FabricCreativeModeTab.builder()
-            .icon(() -> new ItemStack(ModItems.AITRA))
+            .icon(() -> new ItemStack(ModItems.AITRAS))
             .displayItems((parameters, output) ->{
-                output.accept(ModItems.AITRA);
+                output.accept(ModItems.AITRAS);
                 output.accept(ModItems.FIRE_BOOTS);
                 output.accept(ModItems.MUSIC_REMOTE);
                 output.accept(ModBlocks.ATC);

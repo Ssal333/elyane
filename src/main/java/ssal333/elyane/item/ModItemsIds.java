@@ -9,7 +9,7 @@ import ssal333.elyane.Elyane;
 public class ModItemsIds {
 
     public static final ResourceKey<Item> FIRE_BOOTS = create("fire_boots");
-    public static final ResourceKey<Item> AITRA = create("aitra");
+    public static final ResourceKey<Item> AITRAS = create("aitras");
     public static final ResourceKey<Item> MUSIC_REMOTE = create("music_remote");
     public static final ResourceKey<Item> FLIGHT_CODES = create("flight_codes");
 

@@ -16,7 +16,7 @@ import ssal333.elyane.item.ModItems;
 public class BlockFireworkRocketMixin {
     @Inject(at = @At("HEAD"), method = "use", cancellable = true)
     private void init(Level level, Player player, InteractionHand hand, CallbackInfoReturnable<InteractionResult> cir){
-        if (player.getItemBySlot(EquipmentSlot.CHEST).is(ModItems.AITRA)){
+        if (player.getItemBySlot(EquipmentSlot.CHEST).is(ModItems.AITRAS)){
             cir.setReturnValue(InteractionResult.FAIL);
         }
 

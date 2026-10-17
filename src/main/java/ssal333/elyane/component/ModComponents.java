@@ -22,16 +22,11 @@ public class ModComponents {
             DataComponentType.<Boolean>builder().persistent(Codec.BOOL).networkSynchronized(ByteBufCodecs.BOOL).build()
     );
 
-
-
-
     public static final DataComponentType<Integer> FLYING_POWER = Registry.register(
             BuiltInRegistries.DATA_COMPONENT_TYPE,
             Identifier.fromNamespaceAndPath(Elyane.MOD_ID, "flying_power"),
             DataComponentType.<Integer>builder().persistent(ExtraCodecs.NON_NEGATIVE_INT).networkSynchronized(ByteBufCodecs.VAR_INT).build()
     );
-
-
 
     public static final DataComponentType<AdvancedCustomComponent> ARRIVAL_POS = Registry.register(
             BuiltInRegistries.DATA_COMPONENT_TYPE,

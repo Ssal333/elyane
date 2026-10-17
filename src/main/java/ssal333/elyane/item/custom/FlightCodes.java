@@ -1,12 +1,12 @@
 package ssal333.elyane.item.custom;
 
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import ssal333.elyane.component.AdvancedCustomComponent;
 import ssal333.elyane.component.ModComponents;
@@ -22,18 +22,20 @@ public class FlightCodes extends Item {
             ItemStack chestItem = player.getItemBySlot(EquipmentSlot.CHEST);
             ItemStack usedItem = player.getActiveItem();
 
-            if (chestItem.is(ModItems.AITRA)) {
+            if (chestItem.is(ModItems.AITRAS)) {
                 AdvancedCustomComponent component = usedItem.get(ModComponents.ARRIVAL_POS);
+                assert component != null;
                 int x = component.x();
                 int y = component.y();
                 int z = component.z();
 
                 chestItem.set(ModComponents.ARRIVAL_POS, new AdvancedCustomComponent(x, y, z));
-                player.setItemSlot(hand.asEquipmentSlot(), new ItemStack(Items.PAPER));
 
 
 
 
+            }else{
+                player.sendOverlayMessage(Component.translatable("elyane.text.aitras_not_equipped"));
             }
 
         }

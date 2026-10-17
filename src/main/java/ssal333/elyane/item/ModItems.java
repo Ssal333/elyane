@@ -32,8 +32,8 @@ public class ModItems extends Item {
                     .stacksTo(1)
     );
 
-    public static final Item AITRA = register(
-            ModItemsIds.AITRA,
+    public static final Item AITRAS = register(
+            ModItemsIds.AITRAS,
             Aitras::new,
             new Item.Properties()
                     .component(

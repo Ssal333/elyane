@@ -31,7 +31,7 @@ public abstract class ArmorStandControlMixin {
                 ItemStack chestItem = armorStand.getItemBySlot(EquipmentSlot.CHEST);
                 ItemStack feetItem = armorStand.getItemBySlot(EquipmentSlot.FEET);
                 if (tickCount % 20 == 0) {
-                    if (chestItem.is(ModItems.AITRA)) {
+                    if (chestItem.is(ModItems.AITRAS)) {
                         int charge = chestItem.getOrDefault(ModComponents.CHARGE_COMPONENT, 0);
                         if (charge < 2000) {
                             chestItem.set(ModComponents.CHARGE_COMPONENT, charge + 1);

@@ -1,7 +1,7 @@
 {
   "effect.elyane.increasing": "Increasing",
   "item.elyane.fire_boots": "Fire boots",
-  "item.elyane.aitra": "Aitra",
+  "item.elyane.aitras": "Aitras",
   "creativeTab.elyane": "Elyane",
   "item.elyane.music_remote": "Music remote",
   "item.elyane.flight_codes": "Flight codes",
@@ -9,5 +9,6 @@
   "elyane.text.use_paper_compass": "Use a compass and paper to get flight codes",
   "block.elyane.carved_jukebox": "Carved jukebox",
   "elyane.take_off_speed": "Take off speed",
-  "gamerule.elyane.take_off_speed": "Takeoff speed required"
+  "gamerule.elyane.take_off_speed": "Takeoff speed required",
+  "elyane.text.aitras_not_equipped": "Equip aitras to apply"
 }

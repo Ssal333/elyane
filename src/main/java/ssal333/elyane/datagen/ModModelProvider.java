@@ -23,7 +23,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
         itemModelGenerators.generateFlatItem(ModItems.FIRE_BOOTS, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.AITRA, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.AITRAS, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.MUSIC_REMOTE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.FLIGHT_CODES, ModelTemplates.FLAT_ITEM);
     }

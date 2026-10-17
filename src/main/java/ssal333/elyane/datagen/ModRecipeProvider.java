@@ -26,7 +26,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             @Override
             public void buildRecipes() {
                 HolderLookup.RegistryLookup<Item> itemRegistryLookup = registries.lookupOrThrow(Registries.ITEM);
-                shapeless(RecipeCategory.TOOLS, ModItems.AITRA)
+                shapeless(RecipeCategory.TOOLS, ModItems.AITRAS)
                         .requires(Items.ELYTRA)
                         .requires(Items.LAPIS_BLOCK, 4)
                         .requires(Items.DIAMOND, 4)

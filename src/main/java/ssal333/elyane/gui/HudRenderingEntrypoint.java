@@ -20,7 +20,6 @@ import ssal333.elyane.component.ModComponents;
 import ssal333.elyane.item.ModItems;
 import ssal333.elyane.item.custom.Aitras;
 
-import java.awt.*;
 import java.util.Dictionary;
 import java.util.Hashtable;
 
@@ -33,9 +32,6 @@ public class HudRenderingEntrypoint implements ClientModInitializer {
     }
 
     public static int calculateSliderX(int minX, int maxX, int flyingPower){
-        int range = maxX - minX;
-
-
 
         return minX + (int) ((maxX - minX) * (flyingPower/100.0f));
     }
@@ -67,7 +63,7 @@ public class HudRenderingEntrypoint implements ClientModInitializer {
         assert localPlayer != null;
         if (localPlayer.hasItemInSlot(EquipmentSlot.CHEST)) {
             ItemStack itemStack = localPlayer.getItemBySlot(EquipmentSlot.CHEST);
-            if (itemStack.is(ModItems.AITRA) && itemStack.getOrDefault(ModComponents.ACTIVE_WINGS, false)) {
+            if (itemStack.is(ModItems.AITRAS) && itemStack.getOrDefault(ModComponents.ACTIVE_WINGS, false)) {
 
                 int flyingPower = itemStack.getOrDefault(ModComponents.FLYING_POWER, 0);
                 double absoluteSpeed = localPlayer.getKnownMovement().length();
@@ -145,7 +141,7 @@ public class HudRenderingEntrypoint implements ClientModInitializer {
 
 
 
-                String text = "";
+                String text;
                 text = switch (slot) {
                     case 0 -> "Energy: " + charge + "/2000";
                     case 1 -> "Flying speed: " + (flyingSpeed == 0 ? "~0" : flyingSpeed)  + " blocks/second";
